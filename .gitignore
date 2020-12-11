@@ -1,5 +1,5 @@
 *.class
 /.vscode
-Java-Codes.iml
+*.iml
 /.idea
 /out
