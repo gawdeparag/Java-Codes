@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class nsTechnicalTestQuestion{
+class NSTechnicalTestQuestion {
     public static void main(String[] args){
 
         System.out.print("Enter a number: ");

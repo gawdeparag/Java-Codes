@@ -1,4 +1,4 @@
-class hello{
+class Hello{
     public static void main(String[] args) {
         System.out.println("Long time no see, Java!");
         
@@ -26,6 +26,5 @@ class hello{
         char asciiCharacter = 65;
         System.out.println("Character Data: " + character);
         System.out.println("ASCII value " + 65 + " converted into Character: " + asciiCharacter);
-
     }
 }

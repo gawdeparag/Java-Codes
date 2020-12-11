@@ -12,7 +12,7 @@ public class WordCounterInFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Before Split..............");
+        System.out.println("Before Splitting...");
         contents = contents.toLowerCase();
         contents = contents.trim();
         System.out.println(contents);

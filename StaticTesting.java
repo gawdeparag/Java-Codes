@@ -1,11 +1,9 @@
 class StaticTesting{
     public static void main(String[] args){
-        
         ParentClass parentClass = new ChildClass();
         parentClass.method();
         parentClass.variableStatic = 12;
         System.out.println(parentClass.variableStatic);
-        
     }
 }
 class ParentClass{
@@ -18,7 +16,6 @@ class ParentClass{
 
 }
 class ChildClass extends ParentClass{
-
     public void childMethod(){
         System.out.println("This is Child class' method!");
     }

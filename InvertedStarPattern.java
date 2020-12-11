@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class invertedStarPattern{
+class InvertedStarPattern {
     public static void main(String[] args){
         
         System.out.println("Input the number of lines: ");

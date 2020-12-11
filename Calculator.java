@@ -23,21 +23,28 @@ class Calculator {
             
             System.out.println("Input the First number: ");
             double numberOne = scanner.nextDouble();
-            System.out.println("Input the First number: ");
+            System.out.println("Input the Second number: ");
             double numberTwo = scanner.nextDouble();
 
-            if(option == 1){
-                System.out.println(numberOne+" + "+numberTwo+" = "+(numberOne+numberTwo));
-            } else if(option == 2){
-                System.out.println(numberOne+" - "+numberTwo+" = "+(numberOne-numberTwo));
-            } else if(option == 3){
-                System.out.println(numberOne+" * "+numberTwo+" = "+(numberOne*numberTwo));
-            } else if(option == 4){
-                System.out.println(numberOne+" / "+numberTwo+" = "+(numberOne/numberTwo));
-            } else if(option == 5){
-                System.out.println(numberOne+" % "+numberTwo+" = "+(numberOne%numberTwo));
-            } else{
-                System.out.println("Please select a valid option!");
+            switch (option){
+                case 1:
+                    System.out.println(numberOne+" + "+numberTwo+" = "+(numberOne+numberTwo));
+                    break;
+                case 2:
+                    System.out.println(numberOne+" - "+numberTwo+" = "+(numberOne-numberTwo));
+                    break;
+                case 3:
+                    System.out.println(numberOne+" * "+numberTwo+" = "+(numberOne*numberTwo));
+                    break;
+                case 4:
+                    System.out.println(numberOne+" / "+numberTwo+" = "+(numberOne/numberTwo));
+                    break;
+                case 5:
+                    System.out.println(numberOne+" % "+numberTwo+" = "+(numberOne%numberTwo));
+                    break;
+                default:
+                    System.out.println("Please select a valid option!");
+                    break;
             }
         }
     }

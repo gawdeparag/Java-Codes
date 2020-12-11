@@ -1,6 +1,6 @@
 import java.util.*;
 
-class smallestVowel {
+class SmallestVowel {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ class smallestVowel {
             j++;
         }
         asciiValues = removeElements(asciiValues, 0);
-        System.out.println((char) getMin(asciiValues));
+        System.out.println("Smallest Vowel in the string: " + (char) getMin(asciiValues));
     }
 
     // Function for removing all occurences of a specific element in an array
@@ -52,7 +52,7 @@ class smallestVowel {
     public static int getMin(int[] inputArray){
         int minValue = inputArray[0];
         for (int i : inputArray){
-            if(i < minValue){
+            if(i > minValue){
                 minValue = i;
             }
         }
