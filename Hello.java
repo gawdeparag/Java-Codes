@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 class Hello{
     public static void main(String[] args) {
         System.out.println("Long time no see, Java!");
@@ -26,5 +28,9 @@ class Hello{
         char asciiCharacter = 65;
         System.out.println("Character Data: " + character);
         System.out.println("ASCII value " + 65 + " converted into Character: " + asciiCharacter);
+
+        int[] intArray = new int[5];
+        //By-default, data stored in arrays is 0s. eg: intArray[1] = 0
+        System.out.println("By default, the data stored in intArray[1] is: " + intArray[1]);    
     }
 }
