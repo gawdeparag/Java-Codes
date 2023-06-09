@@ -8,7 +8,7 @@ class CurrencyFormatter{
         double payment = scanner.nextDouble();
 
         // For US Dollars
-        Locale AmericanLocale = Locale.getDefault();
+        Locale AmericanLocale = new Locale("en", "US");
         NumberFormat AmericanFormatter = NumberFormat.getCurrencyInstance(AmericanLocale);
         System.out.println("US Dollars: " + AmericanFormatter.format(payment));
 
