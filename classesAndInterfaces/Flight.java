@@ -3,8 +3,32 @@ package classesAndInterfaces;
 public class Flight {
 	
 	// These shouldn't be accessible from main.
-	private int passengers; 
-	private int seats;
+	private int passengers, 
+				seats = 150, 
+				flightNumber;
+	
+	private char flightClass;
+	
+	private boolean[] isSeatAvailable = new boolean[seats];
+	
+	// Initialization Block
+	{
+		for(int i = 0; i < seats; i++) {
+			isSeatAvailable[i] = true;
+		}
+	}
+	
+	public Flight() { }
+	
+	public Flight(int flightNumber) {
+		this.flightNumber = flightNumber;
+	}
+	
+	public Flight(char flightClass) {
+		this.flightClass = flightClass;
+	}
+	
+	
 	// Field Accessor :: getter method
 	public int getSeats() {
 		return seats;
@@ -14,12 +38,6 @@ public class Flight {
 		this.seats = seats;
 	}
 	
-	// Constructor: Using to set an object's initial state.
-	// This constructor can be accessed from main.
-	public Flight(){
-		passengers = 0;
-		seats = 150;
-	}
 	
 	// This method is accessible from main.
 	public void addOnePassenger() {

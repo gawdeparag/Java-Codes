@@ -9,7 +9,7 @@ public class Main {
 		
 		// Code for Flight class:: Learning about encapsulation and access modifiers
 		Flight flightOne = new Flight();
-		Flight flightTwo = new Flight();
+		Flight flightTwo = new Flight(370);
 		flightOne.addOnePassenger();
 		flightTwo.addOnePassenger();
 		
@@ -34,7 +34,7 @@ public class Main {
 		MathEquation[] equations = new MathEquation[4];
 		
 		for(int i = 0; i < equations.length; i++) {
-			equations[i] = create(leftVals[i], rightVals[i], opCodes[i]);
+			equations[i] = new MathEquation(leftVals[i], rightVals[i], opCodes[i]);
 		}
 		
 		for(MathEquation equation : equations) {
@@ -43,13 +43,6 @@ public class Main {
 		}
 		
 		
-	}
-	private static MathEquation create(double leftVal, double rightVal, char opCode) {
-		MathEquation equation = new MathEquation();
-		equation.leftVal = leftVal;
-		equation.rightVal = rightVal;
-		equation.opCode = opCode;
-		return equation;
 	}
 
 	

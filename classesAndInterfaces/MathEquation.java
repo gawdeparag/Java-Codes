@@ -5,6 +5,17 @@ public class MathEquation {
 	double leftVal, rightVal, result;
 	char opCode;
 	
+	public MathEquation() { }
+	public MathEquation(char opCode) {
+		this.opCode = opCode;
+	}
+	public MathEquation(double leftVal, double rightVal, char opCode) {
+		this(opCode);
+		this.leftVal = leftVal;
+		this.rightVal = rightVal;
+//		this(opCode);	// This line will throw an error:: Constructors must be called at the very beginning in Constructor chaining.
+	}
+	
 	void execute() {
 		switch(opCode) {
 		case 'a':
