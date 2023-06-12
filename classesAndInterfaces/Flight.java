@@ -3,8 +3,30 @@ package classesAndInterfaces;
 public class Flight {
 	
 	// These shouldn't be accessible from main.
-	private int passengers; 
-	private int seats;
+	private int passengers, seats = 150;
+	
+	public int getPassengers() {
+		return passengers;
+	}
+	
+	// This is a static variable
+	private static int allPassengers, maxPassengersPerFlight;
+	// These are static methods
+	public static int getAllPassengers() {
+		return allPassengers;
+	}
+	public static void resetAllPassengers() {
+		allPassengers = 0;
+	}
+	
+	// This is a static initialization block
+	static {
+		AdminService admin = new AdminService();
+		admin.connect();
+		maxPassengersPerFlight = admin.isRestricted() ? admin.getMaxFlightPassengers() : Integer.MAX_VALUE;
+		admin.close();
+	}
+	
 	// Field Accessor :: getter method
 	public int getSeats() {
 		return seats;
@@ -23,8 +45,9 @@ public class Flight {
 	
 	// This method is accessible from main.
 	public void addOnePassenger() {
-		if(passengers < seats) {
+		if(passengers < seats && passengers < maxPassengersPerFlight) {
 			passengers += 1;
+			allPassengers += 1;	// Static variable
 		} else {
 			handleTooManyPassengers();
 		}

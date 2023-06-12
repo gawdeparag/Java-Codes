@@ -5,6 +5,9 @@ public class MathEquation {
 	double leftVal, rightVal, result;
 	char opCode;
 	
+	private static int numberOfCalculations; 
+	private static double sumOfResults;
+	
 	void execute() {
 		switch(opCode) {
 		case 'a':
@@ -24,6 +27,11 @@ public class MathEquation {
 			result = 0.0d;
 			break;
 		}
+		numberOfCalculations++;
+		sumOfResults += result;
 	}
-
+	
+	public static double getAverageResult() {
+		return sumOfResults/numberOfCalculations;
+	}
 }

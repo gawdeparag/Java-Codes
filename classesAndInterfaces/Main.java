@@ -8,20 +8,31 @@ public class Main {
 		performCalculations();
 		
 		// Code for Flight class:: Learning about encapsulation and access modifiers
-		Flight flightOne = new Flight();
-		Flight flightTwo = new Flight();
-		flightOne.addOnePassenger();
-		flightTwo.addOnePassenger();
-		
-		Flight flightThree = null;	// Special references :: "null"
-		if(flightOne.hasRoom(flightTwo)) {
-			// Do some combine operations.
-		}
+//		Flight flightOne = new Flight();
+//		Flight flightTwo = new Flight();
+//		flightOne.addOnePassenger();
+//		flightTwo.addOnePassenger();
+//		
+//		Flight flightThree = null;	// Special references :: "null"
+//		if(flightOne.hasRoom(flightTwo)) {
+//			// Do some combine operations.
+//		}
 		
 		// Accessing private variables with getter and setter methods included in "Flight" class.
-		Flight MumToDel = new Flight();
-		MumToDel.setSeats(200);
-		System.out.println("Mumbai to Delhi flight has " + MumToDel.getSeats() + " seats.");
+		Flight mumToDel = new Flight();
+		mumToDel.setSeats(200);
+		System.out.println("Mumbai to Delhi flight has " + mumToDel.getSeats() + " seats.");
+		
+		Flight kolToDel = new Flight();
+		kolToDel.addOnePassenger();
+		kolToDel.addOnePassenger();
+		System.out.println("Kol to Del: "+kolToDel.getPassengers());
+		Flight mumToPun = new Flight();
+		mumToPun.addOnePassenger();
+		System.out.println("Mum to Pun: " + mumToPun.getPassengers());
+		
+		// Accessing a static variable in main.
+		System.out.println(Flight.getAllPassengers());
 		
 	}
 	
@@ -42,6 +53,7 @@ public class Main {
 			System.out.println("Result = " + equation.result);
 		}
 		
+		System.out.println("Average result = " + MathEquation.getAverageResult());
 		
 	}
 	private static MathEquation create(double leftVal, double rightVal, char opCode) {
@@ -52,5 +64,4 @@ public class Main {
 		return equation;
 	}
 
-	
 }
