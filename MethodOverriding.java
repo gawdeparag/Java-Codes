@@ -1,7 +1,7 @@
 /* This is the classic example of Method Overriding where
-   Where child class inherits a method from it's Parent
-   but still overrides it with it's own method with same name as that of 
-   previously inherited method from it's Parent */
+   child class inherits a method from its Parent
+   but still overrides it with its own method with same name as that of
+   previously inherited method from its Parent */
 class OverriddenParentClass{
     void method(){
         System.out.println("Hello from Parent Class!");

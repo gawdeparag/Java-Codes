@@ -2,8 +2,8 @@ class StaticTesting{
     public static void main(String[] args){
         ParentClass parentClass = new ChildClass();
         parentClass.method();
-        parentClass.variableStatic = 12;
-        System.out.println(parentClass.variableStatic);
+        ParentClass.variableStatic = 12;
+        System.out.println(ParentClass.variableStatic);
     }
 }
 class ParentClass{
