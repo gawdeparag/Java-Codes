@@ -1,5 +1,6 @@
-import java.util.*;
-import java.text.*;
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.util.Scanner;
 
 class CurrencyFormatter{
     public static void main(String[] args){

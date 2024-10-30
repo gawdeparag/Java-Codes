@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 class CountOccurencesOne {
     public static void main(String[] args) {
