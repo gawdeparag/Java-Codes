@@ -1,3 +1,5 @@
+package ThreadProblems;
+
 class Counter {
     int count;
 

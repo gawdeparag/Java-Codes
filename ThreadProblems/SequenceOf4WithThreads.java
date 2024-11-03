@@ -1,3 +1,5 @@
+package ThreadProblems;
+
 class NumbersGenerator {
     int number = 1;
     int numberOfThreads;
